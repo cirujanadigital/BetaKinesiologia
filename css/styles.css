@@ -71,10 +71,10 @@ button {
   --primary-dark: #1A3D52;
   --primary-light: #E8F1F5;
 
-  --accent: #00766A;
+  --accent: #005A52;
   --accent-dark: #004d44;
 
-  --cta: #1FB855;
+  --cta: #1A8A45;
   --cta-hover: #188a42;
 
   --dark: #1A1A1A;
@@ -83,7 +83,7 @@ button {
   --white: #FFFFFF;
 
   --success: #00766A;
-  --warning: #D97706;
+  --warning: #B45309;
   --error: #DC2626;
 
   /* Typography */
@@ -915,7 +915,7 @@ button:focus:not(:focus-visible) {
    ============================================ */
 
 .testimonials {
-  background: var(--gray-light);
+  background: var(--white);
 }
 
 .testimonials h2 {
@@ -1258,7 +1258,7 @@ button:focus:not(:focus-visible) {
 }
 
 .footer-col a {
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.95);
   transition: color var(--transition-base);
 }
 
