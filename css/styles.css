@@ -64,19 +64,19 @@ button {
   --primary-dark: #1A3D52;
   --primary-light: #E8F1F5;
 
-  --accent: #00A896;
-  --accent-dark: #00766A;
+  --accent: #00766A;
+  --accent-dark: #004d44;
 
-  --cta: #25D366;
-  --cta-hover: #1FB855;
+  --cta: #1FB855;
+  --cta-hover: #188a42;
 
   --dark: #1A1A1A;
   --gray: #4A5568;
   --gray-light: #E2E8F0;
   --white: #FFFFFF;
 
-  --success: #00A896;
-  --warning: #F59E0B;
+  --success: #00766A;
+  --warning: #D97706;
   --error: #DC2626;
 
   /* Typography */
@@ -198,7 +198,48 @@ section {
     padding: var(--section-padding) 0;
   }
 }
+/* ============================================
+   ACCESIBILIDAD - SKIP LINK
+   ============================================ */
 
+.skip-link {
+  position: absolute;
+  top: -60px;
+  left: 0;
+  background: var(--primary);
+  color: white;
+  padding: var(--space-3) var(--space-6);
+  text-decoration: none;
+  z-index: 10001;
+  font-weight: 700;
+  border-radius: 0 0 var(--radius-md) 0;
+  transition: top 0.3s ease;
+}
+
+.skip-link:focus {
+  top: 0;
+  outline: 3px solid var(--white);
+  outline-offset: -3px;
+}
+/* ============================================
+   ACCESIBILIDAD - FOCUS VISIBLE
+   ============================================ */
+
+/* Focus visible para navegación por teclado */
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible,
+details:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* Remover outline cuando no es teclado */
+a:focus:not(:focus-visible),
+button:focus:not(:focus-visible) {
+  outline: none;
+}
 /* ============================================
    COMPONENTS
    ============================================ */
@@ -207,7 +248,7 @@ section {
 .section-label {
   display: inline-block;
   font-size: var(--text-sm);
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--accent);
@@ -245,7 +286,7 @@ section {
   padding: var(--space-3) var(--space-6);
   background: var(--cta);
   color: var(--white);
-  font-weight: 600;
+  font-weight: 700;
   font-size: var(--text-base);
   border-radius: var(--radius-md);
   transition: all var(--transition-base);
@@ -323,17 +364,16 @@ section {
   gap: var(--space-4);
 }
 
-/* Estilos específicos para el logo de la navegación */
+/* Logo de navegación */
 .nav-logo-img {
     max-width: 50px;
     height: auto;
     display: block;
-    vertical-align: middle;
+    margin: 0;
     padding: 5px 0;
     transition: transform 0.2s ease;
 }
 
-/* Efecto hover profesional */
 .nav-logo-img:hover {
     transform: scale(1.02);
 }
@@ -360,6 +400,12 @@ section {
 
 .nav-menu a:hover {
   color: var(--primary);
+}
+
+/* Focus en nav links */
+.nav-menu a:focus-visible {
+  background: var(--primary-light);
+  outline: 2px solid var(--primary);
 }
 
 .btn-nav {
@@ -848,7 +894,8 @@ section {
 
 .cta-box .btn-primary {
   background: var(--white);
-  color: var(--accent);
+  color: var(--accent-dark);
+  font-weight: 700;
 }
 
 .cta-box .btn-primary:hover {
@@ -871,8 +918,8 @@ section {
 .rating {
   text-align: center;
   font-size: var(--text-lg);
-  color: var(--accent);
-  font-weight: 600;
+  color: var(--warning);
+  font-weight: 700;
   margin-bottom: var(--space-12);
 }
 
@@ -892,9 +939,10 @@ section {
 }
 
 .stars {
-  color: #FFA500;
+  color: var(--warning);
   margin-bottom: var(--space-3);
   font-size: var(--text-sm);
+  font-weight: 700;
 }
 
 .testimonial-card p {
@@ -1083,6 +1131,7 @@ section {
 .contact-item a {
   color: var(--accent);
   text-decoration: underline;
+  font-weight: 600;
   transition: color var(--transition-base);
 }
 
@@ -1195,12 +1244,13 @@ section {
 }
 
 .footer-col a {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.9);
   transition: color var(--transition-base);
 }
 
 .footer-col a:hover {
   color: var(--white);
+  text-decoration: underline;
 }
 
 .footer-logo img {
@@ -1247,7 +1297,7 @@ section {
 }
 
 .footer-bottom p {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.7);
   font-size: var(--text-sm);
   margin: 0;
 }
