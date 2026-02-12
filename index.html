@@ -165,10 +165,9 @@
   <!-- NAVIGATION -->
   <nav class="navbar" role="navigation" aria-label="Navegación principal">
     <div class="container">
-      <a href="#" class="logo" aria-label="BETA Kinesiología Postural - Inicio">
-        <span class="logo-text">BETA</span>
-        <span class="logo-subtitle">Kinesiología Postural</span>
-      </a>
+      <a href="index.html" class="logo" aria-label="BETA Kinesiología Postural - Inicio">
+      <img src="images/logo-sin-fondo.png" alt="BETA Kinesiología Postural" class="nav-logo-img">
+    </a>
 
       <ul class="nav-menu" id="nav-menu">
         <li><a href="#inicio">Inicio</a></li>
@@ -197,7 +196,7 @@
   <section class="hero" id="inicio">
     <div class="container hero-grid">
       <div class="hero-content">
-        <span class="badge">⭐⭐⭐⭐⭐ 5.0 Google Maps · 33 reseñas</span>
+        <span class="badge">⭐⭐⭐⭐⭐ 5.0 Google Maps </span>
 
         <h1>Recuperá Tu Postura y Eliminá el Dolor con RPG</h1>
 
@@ -729,9 +728,10 @@
     <div class="container footer-grid">
       <div class="footer-col">
         <div class="footer-logo">
-          <span class="logo-text">BETA</span>
-          <span class="logo-subtitle">Kinesiología Postural</span>
-        </div>
+  <a href="index.html">
+    <img src="images/logo-sin-fondo.png" alt="BETA Kinesiología Postural" style="max-width: 200px; height: auto;">
+  </a>
+</div>
         <p>Tratamiento kinesiológico especializado en RPG (Reeducación Postural Global) en el centro de Rosario.</p>
         <div class="social-links">
           <a href="https://www.instagram.com/betakinesiopostural/" target="_blank" rel="noopener" aria-label="Instagram">
@@ -776,11 +776,18 @@
     </div>
 
     <div class="footer-bottom">
-      <div class="container">
-        <p>&copy; 2025 BETA Kinesiología Postural. Todos los derechos reservados.</p>
-        <p class="footer-credits">Lic. María Belén Basso - Mat. XXXX · Rosario, Santa Fe</p>
-      </div>
-    </div>
+  <div class="container">
+    <p>&copy; <span id="year"></span> BETA Kinesiología Postural. Todos los derechos reservados.</p>
+    <p class="footer-credits">Lic. María Belén Basso - Mat. 1518/2 · Rosario, Santa Fe</p>
+
+    <p style="margin-top: 10px; font-size: 0.9em;">
+      Diseñada y desarrollada por
+      <a href="https://www.cirujanadigital.com" target="_blank" style="text-decoration: none; font-weight: bold; color: inherit;">
+        Cirujana Digital
+      </a>
+    </p>
+  </div>
+</div>
   </footer>
 
   <!-- STICKY WHATSAPP BUTTON (Mobile) -->
@@ -794,5 +801,8 @@
 </a>
   <!-- JavaScript -->
   <script src="js/main.js"></script>
+  <script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
