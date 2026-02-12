@@ -7,6 +7,13 @@
 /* ============================================
    RESET & BASE
    ============================================ */
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/inter-var.woff2') format('woff2');
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+}
 
 *,
 *::before,
@@ -1229,6 +1236,13 @@ button:focus:not(:focus-visible) {
   gap: var(--space-12);
   padding-bottom: var(--space-12);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.footer-heading {
+  color: var(--white);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  margin-bottom: var(--space-4);
+  margin-top: 0;
 }
 
 .footer-col h4 {

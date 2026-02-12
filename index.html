@@ -31,13 +31,6 @@
   <!-- Canonical -->
   <link rel="canonical" href="https://betakinesiopostural.com">
 
-  <!-- Preconnect -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <!-- Fonts (local preferido, Google Fonts como fallback) -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -170,7 +163,13 @@
   <nav class="navbar" role="navigation" aria-label="Navegación principal">
     <div class="container">
       <a href="index.html" class="logo" aria-label="BETA Kinesiología Postural - Inicio">
-      <img src="images/logo-sin-fondo.png" alt="BETA Kinesiología Postural" class="nav-logo-img">
+      <picture>
+    <source srcset="images/logo-navbar.webp" type="image/webp">
+    <img src="images/logo-navbar.webp"
+         alt="BETA Kinesiología Postural"
+         class="nav-logo-img"
+         height="60">
+  </picture>
     </a>
 
       <ul class="nav-menu" id="nav-menu">
@@ -261,11 +260,17 @@
       </div>
 
       <div class="hero-image">
-        <img src="images/hero-kinesio.webp"
-             alt="Tratamiento de kinesiología postural RPG en Rosario"
-             loading="eager"
-             width="600"
-             height="700">
+        <picture>
+  <source
+    media="(max-width: 1200px)"
+    srcset="images/hero-kinesio.webp"
+    type="image/webp">
+    <img src="images/hero-kinesio.webp"
+       alt="Tratamiento de kinesiología postural RPG en Rosario"
+       loading="eager"
+       width="600"
+       height="700">
+</picture>
       </div>
     </div>
   </section>
@@ -274,11 +279,20 @@
   <section class="bio">
     <div class="container bio-grid">
       <div class="bio-image">
-        <img src="images/dra-basso.webp"
-             alt="Lic. María Belén Basso - Kinesióloga Fisiatra especializada en RPG"
-             loading="lazy"
-             width="500"
-             height="600">
+        <picture>
+  <source
+    media="(max-width: 768px)"
+    srcset="images/dra-basso.webp"
+    type="image/webp">
+  <source
+    srcset="images/dra-basso.webp"
+    type="image/webp">
+  <img src="images/dra-basso.webp"
+       alt="Lic. María Belén Basso - Kinesióloga Fisiatra especializada en RPG"
+       loading="lazy"
+       width="500"
+       height="600">
+</picture>
       </div>
 
       <div class="bio-content">
@@ -737,7 +751,12 @@
       <div class="footer-col">
         <div class="footer-logo">
   <a href="index.html">
-    <img src="images/logo-sin-fondo.png" alt="BETA Kinesiología Postural" style="max-width: 200px; height: auto;">
+    <picture>
+      <source srcset="images/logo-footer.png" type="image/webp">
+      <img src="images/logo-footer.png"
+           alt="BETA Kinesiología Postural"
+           width="100">
+    </picture>
   </a>
 </div>
         <p>Tratamiento kinesiológico especializado en RPG (Reeducación Postural Global) en el centro de Rosario.</p>
@@ -751,7 +770,7 @@
       </div>
 
       <div class="footer-col">
-        <h4>Servicios</h4>
+        <p class="footer-heading">Servicios</p>
         <ul>
           <li><a href="#servicios">RPG - Tres Escuadras</a></li>
           <li><a href="#servicios">Terapia Manual</a></li>
