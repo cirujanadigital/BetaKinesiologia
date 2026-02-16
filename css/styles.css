@@ -1,12 +1,3 @@
-/* ============================================
-   BETA KINESIOLOGÍA POSTURAL
-   Sistema de estilos optimizado para performance
-   Mobile-first approach
-   ============================================ */
-
-/* ============================================
-   RESET & BASE
-   ============================================ */
 @font-face {
   font-family: 'Inter';
   src: url('../fonts/inter-var.woff2') format('woff2');
@@ -61,35 +52,26 @@ button {
   background: none;
 }
 
-/* ============================================
-   CSS VARIABLES (Design System)
-   ============================================ */
+/* CSS VARIABLES (Design System)*/
 
 :root {
   /* Colors */
   --primary: #2C5F7C;
   --primary-dark: #1A3D52;
   --primary-light: #E8F1F5;
-
   --accent: #005A52;
   --accent-dark: #004d44;
-
   --cta: #1A8A45;
   --cta-hover: #188a42;
-
   --dark: #1A1A1A;
   --gray: #4A5568;
   --gray-light: #E2E8F0;
   --white: #FFFFFF;
-
   --success: #00766A;
   --warning: #B45309;
   --error: #DC2626;
-
-  /* Typography */
   --font-heading: 'Inter', -apple-system, sans-serif;
   --font-body: 'Inter', -apple-system, sans-serif;
-
   --text-xs: 0.75rem;
   --text-sm: 0.875rem;
   --text-base: 1rem;
@@ -99,8 +81,6 @@ button {
   --text-3xl: 1.875rem;
   --text-4xl: 2.25rem;
   --text-5xl: 3rem;
-
-  /* Spacing */
   --space-1: 0.25rem;
   --space-2: 0.5rem;
   --space-3: 0.75rem;
@@ -113,35 +93,22 @@ button {
   --space-16: 4rem;
   --space-20: 5rem;
   --space-24: 6rem;
-
-  /* Layout */
   --container-max: 1200px;
   --container-padding: var(--space-4);
   --section-padding: var(--space-16);
   --section-padding-mobile: var(--space-12);
-
-  /* Shadows */
   --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
   --shadow-md: 0 4px 6px rgba(0,0,0,0.07);
   --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
   --shadow-xl: 0 20px 25px rgba(0,0,0,0.15);
-
-  /* Border Radius */
   --radius-sm: 0.25rem;
   --radius-md: 0.5rem;
   --radius-lg: 1rem;
   --radius-full: 9999px;
-
-  /* Transitions */
   --transition-fast: 0.15s ease;
   --transition-base: 0.3s ease;
   --transition-slow: 0.5s ease;
 }
-
-/* ============================================
-   TYPOGRAPHY
-   ============================================ */
-
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
   font-weight: 700;
@@ -149,66 +116,48 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--dark);
   margin-bottom: var(--space-4);
 }
-
 h1 {
   font-size: clamp(2rem, 5vw, 3rem);
   letter-spacing: -0.02em;
 }
-
 h2 {
   font-size: clamp(1.75rem, 4vw, 2.25rem);
   letter-spacing: -0.01em;
 }
-
 h3 {
   font-size: clamp(1.25rem, 3vw, 1.5rem);
 }
-
 h4 {
   font-size: var(--text-xl);
 }
-
 p {
   margin-bottom: var(--space-4);
   color: var(--gray);
 }
-
 .lead {
   font-size: var(--text-xl);
   font-weight: 500;
   color: var(--dark);
   line-height: 1.5;
 }
-
 strong {
   font-weight: 600;
-  color: var(--dark);
 }
-
-/* ============================================
-   LAYOUT
-   ============================================ */
-
 .container {
   max-width: var(--container-max);
   margin: 0 auto;
   padding: 0 var(--container-padding);
   width: 100%;
 }
-
 section {
   padding: var(--section-padding-mobile) 0;
 }
-
 @media (min-width: 768px) {
   section {
     padding: var(--section-padding) 0;
   }
 }
-/* ============================================
-   ACCESIBILIDAD - SKIP LINK
-   ============================================ */
-
+/*  ACCESIBILIDAD - SKIP LINK */
 .skip-link {
   position: absolute;
   top: -60px;
@@ -228,9 +177,6 @@ section {
   outline: 3px solid var(--white);
   outline-offset: -3px;
 }
-/* ============================================
-   ACCESIBILIDAD - FOCUS VISIBLE
-   ============================================ */
 
 /* Focus visible para navegación por teclado */
 a:focus-visible,
@@ -247,10 +193,7 @@ a:focus:not(:focus-visible),
 button:focus:not(:focus-visible) {
   outline: none;
 }
-/* ============================================
-   COMPONENTS
-   ============================================ */
-
+/* COMPONENTS */
 /* Section Labels */
 .section-label {
   display: inline-block;
@@ -349,9 +292,7 @@ button:focus:not(:focus-visible) {
   box-shadow: var(--shadow-lg);
 }
 
-/* ============================================
-   NAVIGATION
-   ============================================ */
+/*    NAVIGATION */
 
 .navbar {
   position: sticky;
@@ -407,6 +348,7 @@ button:focus:not(:focus-visible) {
 
 .nav-menu a:hover {
   color: var(--primary);
+  font-weight: 700;
 }
 
 /* Focus en nav links */
@@ -888,7 +830,7 @@ button:focus:not(:focus-visible) {
   text-align: center;
   padding: var(--space-8);
   background: var(--accent);
-  color: var(--white);
+  color: var(--white) !important;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-lg);
 }
@@ -1179,9 +1121,7 @@ button:focus:not(:focus-visible) {
   }
 }
 
-/* ============================================
-   PRE-FOOTER CTA
-   ============================================ */
+/*    PRE-FOOTER CTA */
 
 .pre-footer-cta {
   background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
@@ -1220,9 +1160,7 @@ button:focus:not(:focus-visible) {
   font-size: var(--text-sm);
 }
 
-/* ============================================
-   FOOTER
-   ============================================ */
+/*  FOOTER */
 
 .footer {
   background: var(--dark);
@@ -1332,9 +1270,7 @@ button:focus:not(:focus-visible) {
   }
 }
 
-/* ============================================
-   STICKY WHATSAPP BUTTON
-   ============================================ */
+/*  STICKY WHATSAPP BUTTON */
 
 .whatsapp-sticky {
   position: fixed;
@@ -1378,9 +1314,7 @@ button:focus:not(:focus-visible) {
   }
 }
 
-/* ============================================
-   UTILITIES
-   ============================================ */
+/*  UTILITIES */
 
 .text-center {
   text-align: center;
